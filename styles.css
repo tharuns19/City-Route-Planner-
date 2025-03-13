@@ -1,0 +1,91 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url("https://tse4.mm.bing.net/th?id=OIP.mWeKEovAX_wEbia5huBobwHaE7&pid=Api&P=0&h=180");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+b {
+  color: rgb(203, 60, 60);
+}
+
+.container {
+  display: flex;
+  /* Use flexbox for layout */
+  flex-direction: row;
+  /* Arrange items side by side */
+  justify-content: space-between;
+  /* Space between map and results */
+  align-items: flex-start;
+  /* Align items at the top */
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 1200px;
+  /* Limit container width for larger screens */
+  height: 70vh;
+  /* Adjust height relative to the screen */
+}
+
+/* Left Panel for Results */
+#result {
+  flex: 0 0 30%;
+  /* Occupy 30% of the container */
+  padding-right: 20px;
+  font-size: 1.2rem;
+  color: #007bff;
+  border-right: 1px solid #ddd;
+  /* Optional: Separate visually with a border */
+}
+
+/* Right Panel for Map */
+#map {
+  flex: 1;
+  /* Occupy remaining space (70%) */
+  height: 100%;
+  /* Full height of the container */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    /* Stack map and results vertically */
+    height: auto;
+    /* Adjust height */
+  }
+
+  #result {
+    flex: none;
+    /* Reset flex sizing */
+    width: 100%;
+    /* Full width for smaller screens */
+    border-right: none;
+    /* Remove border for stacked layout */
+    margin-bottom: 20px;
+  }
+
+  #map {
+    flex: none;
+    width: 100%;
+    /* Full width for the map */
+    height: 400px;
+    /* Adjust height for small screens */
+  }
+}
