@@ -58,5 +58,5 @@ script2.js: Implements Dijkstra's Algorithm and displays the route on the map.
 
 1. Clone the Repository:
    ```bash
-   git clone https://github.com/your-username/city-route-planner.git
+   git clone https://github.com/tharuns19-/city-route-planner.git
    cd city-route-planner
